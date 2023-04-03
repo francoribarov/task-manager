@@ -5,7 +5,9 @@ const tasks = require('./routes/tasks.js')
 const connectDb = require('./db/connect')
 require('dotenv').config()
 
+app.use(express.static('./public'))
 app.use(express.json())
+
 
 
 app.use('/api/v1/tasks', tasks)
